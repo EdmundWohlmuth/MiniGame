@@ -27,8 +27,8 @@ namespace MiniGame
                 {'.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.'}
         };
 
-        int rows;
-        int columns;
+        public int rows;
+        public int columns;
         int scale = 3; // incase I want to make the map bigger in the future
 
         public void DrawMap()
@@ -45,6 +45,11 @@ namespace MiniGame
 
                 Console.WriteLine();
             }
+        }
+
+        public void MovePlayer(int x, int y, char player)
+        {
+            gameMap[x, y] = player;
         }
     }
 }

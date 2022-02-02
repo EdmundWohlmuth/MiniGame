@@ -11,7 +11,6 @@ namespace MiniGame
         public int playerX;
         public int playerY;
         public char player;
-        Map map = new Map();
 
         public void UpdatePlayer()
         {
@@ -20,22 +19,22 @@ namespace MiniGame
             ConsoleKey keyPress = Console.ReadKey(true).Key;
             switch (keyPress)
             {
-                case ConsoleKey.A:
+                case ConsoleKey.W:
                     playerX -= 1;
                     Console.WriteLine(playerX + "," + playerY);
                     break;
 
-                case ConsoleKey.D:
+                case ConsoleKey.S:
                     playerX += 1;
                     Console.WriteLine(playerX + "," + playerY);
                     break;
 
-                case ConsoleKey.S:
+                case ConsoleKey.D:
                     playerY += 1;
                     Console.WriteLine(playerX + "," + playerY);
                     break;
 
-                case ConsoleKey.W:
+                case ConsoleKey.A:
                     playerY -= 1;
                     Console.WriteLine(playerX + "," + playerY);
                     break;
@@ -44,11 +43,6 @@ namespace MiniGame
 
                     break;
             }
-        }
-
-        public void MovePlayer()
-        {
-            map.gameMap[playerX, playerY] = player;
         }
     }
 }

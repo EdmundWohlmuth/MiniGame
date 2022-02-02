@@ -21,9 +21,8 @@ namespace MiniGame
             while (!gameOver)
             {
                 newMap.DrawMap();
-                player.MovePlayer();
+                newMap.MovePlayer(player.playerX, player.playerY, '@');
                 player.UpdatePlayer();
-                
             }
            
         }
