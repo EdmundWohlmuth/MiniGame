@@ -10,7 +10,7 @@ namespace MiniGame
     {
         // nested for loop to draw map
 
-        static char[,] gameMap = new char[,]
+        public char[,] gameMap = new char[,]
         {
                 {'.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.'},
                 {'.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.'},
@@ -27,12 +27,15 @@ namespace MiniGame
                 {'.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.'}
         };
 
-        int rows = gameMap.GetLength(0);
-        int columns = gameMap.GetLength(1);
+        int rows;
+        int columns;
         int scale = 3; // incase I want to make the map bigger in the future
 
         public void DrawMap()
         {
+            rows = gameMap.GetLength(0);
+            columns = gameMap.GetLength(1);
+
             for (int x = 0; x <= rows - 1; x++)
             {
                 for (int y = 0; y <= columns - 1; y++)

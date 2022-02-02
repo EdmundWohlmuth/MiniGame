@@ -16,10 +16,14 @@ namespace MiniGame
         {
             //int
             Map newMap = new Map();
+            Player player = new Player();
 
             while (!gameOver)
             {
                 newMap.DrawMap();
+                player.MovePlayer();
+                player.UpdatePlayer();
+                
             }
            
         }
