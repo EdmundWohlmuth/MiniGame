@@ -47,7 +47,7 @@ namespace MiniGame
             }
         }
 
-        public void MovePlayer(int x, int y, char player)
+        public void UpdatePlayer(int x, int y, char player)
         {
             gameMap[x, y] = player;
         }

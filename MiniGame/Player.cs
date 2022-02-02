@@ -10,15 +10,13 @@ namespace MiniGame
     {
         public int playerX;
         public int playerY;
-        public char player;
 
-        public void UpdatePlayer()
+        public void MovePlayer()
         {
-            player = '@';
-
             ConsoleKey keyPress = Console.ReadKey(true).Key;
             switch (keyPress)
             {
+                // ----------------------- WASD --------------------------
                 case ConsoleKey.W:
                     playerX -= 1;
                     Console.WriteLine(playerX + "," + playerY);
@@ -35,6 +33,27 @@ namespace MiniGame
                     break;
 
                 case ConsoleKey.A:
+                    playerY -= 1;
+                    Console.WriteLine(playerX + "," + playerY);
+                    break;
+
+                    // ----------------- Arrow Keys -------------------------
+                case ConsoleKey.UpArrow:
+                    playerX -= 1;
+                    Console.WriteLine(playerX + "," + playerY);
+                    break;
+
+                case ConsoleKey.DownArrow:
+                    playerX += 1;
+                    Console.WriteLine(playerX + "," + playerY);
+                    break;
+
+                case ConsoleKey.RightArrow:
+                    playerY += 1;
+                    Console.WriteLine(playerX + "," + playerY);
+                    break;
+
+                case ConsoleKey.LeftArrow:
                     playerY -= 1;
                     Console.WriteLine(playerX + "," + playerY);
                     break;
